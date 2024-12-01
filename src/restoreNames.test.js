@@ -7,7 +7,7 @@ describe('restoreNames', () => {
     expect(restoreNames).toBeInstanceOf(Function);
   });
 
-  it(`restores for 'undefiend'`, () => {
+  it(`should restore for 'undefiend'`, () => {
     const user = [
       {
         firstName: undefined,
@@ -48,7 +48,7 @@ describe('restoreNames', () => {
     expect(user).toEqual(expectedUser);
   });
 
-  it(`restores for absent 'lastName'`, () => {
+  it(`should restor absent 'lastName'`, () => {
     const user = [
       {
         lastName: 'Horseman',
@@ -86,7 +86,7 @@ describe('restoreNames', () => {
     expect(user).toEqual(expectedUser);
   });
 
-  it(`does not edit filled 'lastName'`, () => {
+  it(`should not edit filled 'lastName'`, () => {
     const user = [
       {
         firstName: 'Bojack',
@@ -127,7 +127,7 @@ describe('restoreNames', () => {
     expect(user).toEqual(expectedUser);
   });
 
-  it('function does not return', () => {
+  it('should return undefined', () => {
     const user = [
       {
         lastName: 'Horseman',
@@ -146,7 +146,7 @@ describe('restoreNames', () => {
     expect(restoreNames(user)).toBeUndefined();
   });
 
-  it('does not edit empty array', () => {
+  it('should not edit empty array', () => {
     const user = [];
     const expectedUser = [];
 
